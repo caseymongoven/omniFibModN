@@ -32,7 +32,7 @@ class FibSeqModN : public SoundSource {
   		currentPos = 0;
   	
       	stringstream ss;
-   		ss << mod;
+		ss << mod;
       	string sfile = "rim/"+ss.str()+".wav";
       	
     	play.load(sfile.c_str());
