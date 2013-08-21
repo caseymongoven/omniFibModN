@@ -20,8 +20,8 @@ Stereographic stereo;
 
 AudioScene scene(3, 3, AUDIO_BLOCK_SIZE);
 const int numSpeakers = 54;
-const double topEl = 30.0; // (or 45???)
-const double botEl =-30.0; // (or -45???)
+const double topEl = 30.0;
+const double botEl = -30.0;
 Speaker speakers[numSpeakers] = {
 	Speaker( 1-1, 270.0, topEl),
 	Speaker( 2-1, 300.0, topEl),
@@ -79,7 +79,6 @@ Speaker speakers[numSpeakers] = {
 	Speaker(52-1,180.0, botEl),
 	Speaker(53-1,210.0, botEl),
 	Speaker(54-1,240.0, botEl),
-	
 };
 
 
@@ -316,7 +315,6 @@ struct MyApp : OmniApp {
 		scene.encode(numFrames, io.framesPerSecond());
 		scene.render(&io.out(0,0), numFrames);
 		
-
 	}
   }
 

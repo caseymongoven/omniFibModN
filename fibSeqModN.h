@@ -20,7 +20,6 @@ class FibSeqModN : public SoundSource {
   
   	FibSeqModN(Vec3f seqPos_, const int g0_, const int g1_, const int mod_) : seqPos(seqPos_), g0(g0_), g1(g1_), mod(mod_) {
   	
-
   		level = .1; // level of samples being played
   		
 		farClip(75.0); // distance at which amplitude reaches ampFar
@@ -96,9 +95,7 @@ class FibSeqModN : public SoundSource {
 	
 	virtual void onUpdateNav(){
 		Pose p;
-		//actual position causing strange sounds due to doppler shift interpolation deal
 		p.pos(getPosition() + Vec3f(0.0, currentMemberFloat(), apothem));
-		//p.pos(getPosition());
 		SoundSource::pose(p);
 	}
 
@@ -132,8 +129,6 @@ class FibSeqModN : public SoundSource {
     float apothem, radius, level;
 
     Mesh m;
-
-
 
 };
 
